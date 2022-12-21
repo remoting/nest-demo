@@ -1,3 +1,12 @@
+## 初始化步骤
+```bash
+nest new nest-demo
+```
+
+## 容器启动
+```bash
+pm2-runtime start ecosystem.config.js
+```
 ## Installation
 
 ```bash
