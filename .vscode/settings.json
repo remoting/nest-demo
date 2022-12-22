@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "editor.mouseWheelZoom": false,
+  "window.zoomLevel": 0,
+  "eslint.format.enable": true
+}
