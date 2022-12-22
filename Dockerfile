@@ -2,7 +2,7 @@ FROM node:16-alpine
 
 WORKDIR /program/server
 
-COPY . ./
+COPY . .
 
 RUN ./build.sh
 
