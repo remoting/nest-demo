@@ -16,14 +16,14 @@ export const buildDefaultConfig = (): Configuration => {
         keepFileExt: true,
         layout: {
           type: 'pattern',
-          pattern: '%d{yyyy-MM-dd hh.mm.ss.SSS} %f{1} %l %o %p %c %m',
+          pattern: '%d{yyyy-MM-dd hh.mm.ss.SSS} %p %c | %f{1} %l %o | %m',
         },
       },
       console: {
         type: 'stdout',
         layout: {
           type: 'pattern',
-          pattern: '%d{yyyy-MM-dd hh.mm.ss.SSS} %f{1} %l %o %p %c %m',
+          pattern: '%d{yyyy-MM-dd hh.mm.ss.SSS} %p %c | %f{1} %l %o | %m',
         },
       },
     },
