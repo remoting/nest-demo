@@ -1,5 +1,5 @@
 import { Controller, Get, Logger, Inject } from '@nestjs/common';
-import { ConfigService } from '../config/service';
+import { ConfigService } from '../frame/config/service';
 import { HomeService } from './service';
 
 @Controller()

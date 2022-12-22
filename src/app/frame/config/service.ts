@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { subscribe } from '../../agent/nacos.worker';
+import { subscribe } from '../../../agent/nacos.worker';
 @Injectable()
 export class ConfigService {
   config: any;

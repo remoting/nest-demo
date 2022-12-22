@@ -12,7 +12,7 @@ module.exports = {
       instance_var: 'INSTANCE_ID',
       //error_file: logPath + "err.log",//错误输出日志
       //out_file: logPath + "out.log", //日志
-      script: './dist/index.js',
+      script: './dist/main.js',
       //log_date_format: "YYYY-MM-DD HH:mm:ss.SSS "
     },
   ],
