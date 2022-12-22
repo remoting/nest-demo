@@ -1,6 +1,13 @@
 import { LoggerService as BaseLoggerService, Injectable } from '@nestjs/common';
 import { buildDefaultConfig } from '../../../agent/logger';
-import { Logger, configure, Configuration, shutdown, getLogger } from 'log4js';
+import {
+  Logger,
+  configure,
+  Configuration,
+  shutdown,
+  getLogger,
+  CallStack,
+} from 'log4js';
 @Injectable()
 export class LoggerService implements BaseLoggerService {
   private loggers: Map<string, Logger>;
@@ -16,6 +23,21 @@ export class LoggerService implements BaseLoggerService {
       logger = getLogger(loggerName);
       this.loggers.set(loggerName, logger);
     }
+    logger.callStackLinesToSkip = 3;
+    /*
+    logger.setParseCallStackFunction(
+      (error: Error, linesToSkip: number): CallStack => {
+        //
+        return {
+          functionName: '1',
+          fileName: 'a',
+          lineNumber: 2,
+          columnNumber: 1,
+          callStack: '',
+        };
+      },
+    );
+    */
     return logger;
   }
 
