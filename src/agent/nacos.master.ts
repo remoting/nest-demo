@@ -19,16 +19,3 @@ export class NacosManager {
     });
   }
 }
-
-let configService = null;
-setInterval(() => {
-  if (configService.config == null) {
-    configService.config = {};
-    configService.config.age = 0;
-  }
-  configService.config.age = configService.config.age + 1;
-}, 1000);
-
-export const subscribe = (config: any) => {
-  configService = config;
-};
