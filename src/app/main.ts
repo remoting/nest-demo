@@ -1,12 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from './frame/config/module';
-import { LoggerService } from './frame/logger/service';
+import { FrameModule } from './frame/frame.module';
+import { LoggerService } from './frame/logger.service';
 import { HomeModule } from './home/module';
-import { MySqlModule } from './frame/mysql/module';
 
 @Module({
-  imports: [ConfigModule.register(), MySqlModule.register(), HomeModule],
+  imports: [FrameModule.register(), HomeModule],
 })
 class AppModule {}
 

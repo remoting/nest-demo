@@ -1,13 +1,15 @@
-import { MySqlService } from './service';
 import { DynamicModule, Module } from '@nestjs/common';
+import { ConfigService } from './config.service';
+import { MySqlService } from './mysql.service';
 
 @Module({})
-export class MySqlModule {
+export class FrameModule {
   static register(): DynamicModule {
     return {
       global: true,
-      module: MySqlModule,
+      module: FrameModule,
       providers: [
+        ConfigService,
         {
           provide: MySqlService,
           useFactory: () => {
@@ -15,7 +17,7 @@ export class MySqlModule {
           },
         },
       ],
-      exports: [MySqlService],
+      exports: [ConfigService, MySqlService],
     };
   }
 }

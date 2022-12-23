@@ -1,5 +1,5 @@
 import { LoggerService as BaseLoggerService, Injectable } from '@nestjs/common';
-import { buildDefaultConfig } from '../../../agent/logger';
+import { buildDefaultConfig } from '../../agent/logger';
 import { Logger, configure, Configuration, shutdown, getLogger } from 'log4js';
 @Injectable()
 export class LoggerService implements BaseLoggerService {

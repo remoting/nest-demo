@@ -1,6 +1,6 @@
-import { MySqlService } from './../frame/mysql/service';
+import { MySqlService } from '../frame/mysql.service';
 import { Controller, Get, Logger, Inject } from '@nestjs/common';
-import { ConfigService } from '../frame/config/service';
+import { ConfigService } from '../frame/config.service';
 import { HomeService } from './service';
 
 @Controller()
