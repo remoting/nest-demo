@@ -19,12 +19,12 @@ export class HomeController {
   }
 
   @Get('/index')
-  getHello(): string {
+  async getHello(): Promise<void> {
     console.log(this.configService.get('database'));
     console.log(this.configService.get('age'));
     this.logger.log('AppController');
     this.CONNECTION1.query('s', null);
     this.connection2.query('s', null);
-    return this.homeService.getHello();
+    await this.homeService.getHello();
   }
 }
