@@ -10,11 +10,10 @@ export class DataSourceService {
       port: 3306,
       username: 'lazyhealth_test',
       password: 'fnua5vhfEVRPSUei',
-      database: 'lazyhealth_test',
-      entities: [
-        '/Users/lanren/project/nest-demo/dist/app/home/test.entity.js',
-      ],
+      database: 'test',
+      entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
+      logging: true,
     });
   }
   getRepository<Entity extends ObjectLiteral>(

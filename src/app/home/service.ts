@@ -14,7 +14,11 @@ export class HomeService {
 
       const sss = await allT.query('select * from test_001');
       console.log(sss);
-      const allUsers = await this.dataSourceService.getRepository(Test).find();
+      const allUsers = await this.dataSourceService
+        .getRepository(Test)
+        .findOneBy({
+          id: 1, // where "id" is your primary column name
+        });
       console.log(allUsers);
     } catch (error) {
       console.error(error);
