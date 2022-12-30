@@ -5,7 +5,7 @@
             "type": "node-terminal",
             "name": "Debug",
             "request": "launch",
-            "command": "npm run test:debug",
+            "command": "npm run start:debug",
             "cwd": "${workspaceFolder}"
         }
     ]

@@ -5,6 +5,7 @@ export class DataSourceService {
   private dataSource: DataSource;
   constructor() {
     this.dataSource = new DataSource({
+      name: "default",
       type: 'mysql',
       host: '192.168.18.218',
       port: 3306,
